@@ -89,6 +89,13 @@ body {
     
 }
 
+.skill-tag {
+  white-space: nowrap; /* Text ko line break hone se rokne ke liye */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Agar space kam ho toh dot-dot dikhaye */
+  max-width: 100%;
+}
+
 @media (min-width: 1024px) {
   .cards-grid {
     grid-template-columns: repeat(2, 1fr);
