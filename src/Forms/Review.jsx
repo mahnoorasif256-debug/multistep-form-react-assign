@@ -71,9 +71,10 @@ const Step3 = ({updatestep , data , progressPercentage}) => {
   <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.35rem', marginTop: '0.5rem' , textAlign: 'center' }}>
     {data.skills && Array.isArray(data.skills) && data.skills.length > 0 ? (
       data.skills.map((s, i) => (
-        <span key={i} style={{ fontSize: '0.95rem', background: 'rgba(37, 99, 235, 0.25)', border: '1px solid rgba(37, 99, 235, 0.4)', padding: '0.4rem 0.5rem', borderRadius: '6px', width: '15%' ,  color: '#67e8f9'  }}>
+        <span key={i} className="skill-tag" style={{ fontSize: '0.95rem', background: 'rgba(37, 99, 235, 0.25)', border: '1px solid rgba(37, 99, 235, 0.4)', padding: '0.4rem 0.5rem', borderRadius: '6px', color: '#67e8f9' }}>
           {s}
         </span>
+  
       ))
     ) : (
       <span className="value" style={{ color: '#94a3b8', fontSize: '0.8rem'  }}>No skills added</span>

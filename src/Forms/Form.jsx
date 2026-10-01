@@ -15,23 +15,6 @@ const Form = () => {
     skills: [],
   });
 
-const handlesubmit = (e) =>{
-  e.preventDefault();
-  console.log(data);
-
-setstep(1);
-  setdata({
-  name: "",
-    email: "",
-    contact: "",
-    role: "",
-    level: "",
-    skills: [],
-
-  })
-  
-}
-
 
 
   const calculateProgress = () => {

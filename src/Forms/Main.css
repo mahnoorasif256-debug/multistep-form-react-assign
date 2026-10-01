@@ -7,7 +7,6 @@ body {
   font-family: 'Inter', sans-serif;
 }
 
-/* Poora page background container */
 .form-background {
   min-height: 100vh;
   width: 100%;
@@ -252,6 +251,7 @@ body {
   padding: 0.75rem;
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.05);
+
 }
 
 .detail-box span.label {
@@ -436,13 +436,16 @@ input[type="number"] {
   align-items: center;
   gap: 1rem;
 }
- 
-
-.preview-details-grid {
+ .preview-details-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 0.75rem;
 }
+
+.preview-details-grid .detail-box:nth-child(3) {
+  grid-column: span 2;
+}
+
 
 .detail-box {
   background: rgba(3, 7, 18, 0.4);
@@ -460,6 +463,8 @@ input[type="number"] {
   box-shadow: 0 0 15px rgba(34, 211, 238, 0.15), inset 0 0 10px rgba(255, 255, 255, 0.05);
   transform: translateY(-2px);
 }
+
+
 /* ================= Responsive (Review page) ================= */
 
 /* Tablet */
@@ -552,6 +557,63 @@ input[type="number"] {
     gap: 0.6rem;
   }
   .review-actions button {
+    width: 80%;
+  }
+}
+
+
+
+/* ================= Extra responsive fixes ================= */
+
+.cards-grid > * {
+  min-width: 0;
+}
+
+.preview-details-grid .detail-box:last-child {
+  grid-column: 1 / -1;
+}
+
+.skill-tag {
+  width: 15%;
+  overflow-wrap: anywhere;
+}
+
+@media (min-width: 1024px) {
+  .cards-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .skill-tag {
+    width: auto;
+  }
+}
+
+/* Mobile */
+@media (max-width: 581px) {
+  .card-title {
+    font-size: 1.1rem;
+  }
+
+  .card-actions {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1.25rem;
+  }
+  .card-actions .next-btn {
+    width: 60%;
+    max-width: 100%;
+    height: 40px;
+    padding: 0;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 420px) {
+  .card-actions .next-btn {
     width: 80%;
   }
 }
